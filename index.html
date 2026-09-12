@@ -18,68 +18,96 @@
    Paleta tomada de la invitacion aprobada: tinta marina + fucsia.
    ============================================================ */
 
+/* ---------------------------------------------------------------
+   PALETA OFICIAL DE AMERICAN HELP CENTERS
+   Sale de piezas/marca/marca.css, que es el sistema canonico:
+   azul #1226C8, fucsia #E5199A, violeta #7B2BD4 (el del ala del
+   aguila) y el degradado de marca que los une.
+   --------------------------------------------------------------- */
 :root{
-  --papel:        #F6F3F2;
+  /* --- los colores de la marca, tal cual --- */
+  --azul:        #1226C8;
+  --azul-osc:    #0A1580;
+  --azul-noche:  #060C4A;
+  --azul-claro:  #3A54E8;
+  --fucsia:      #E5199A;
+  --magenta:     #B9159C;
+  --violeta:     #7B2BD4;
+  --tinta:       #12123A;
+  --grad-marca:  linear-gradient(100deg, #1226C8 0%, #7B2BD4 55%, #E5199A 100%);
+
+  /* --- superficies: todo claro --- */
+  --papel:        #FBFAFD;
   --papel-2:      #FFFFFF;
-  --papel-3:      #EFEAEA;
-  --titulo:       #14183D;
-  --texto:        #33313F;
-  --humo:         #7C7689;
-  --linea:        #E4DDDF;
-  --bloque:       #14183D;
-  --bloque-2:     #1E2350;
-  --bloque-texto: #F6F3F2;
-  --bloque-humo:  #A9A4BC;
+  --papel-3:      #F2F1F7;
+  --titulo:       #12123A;
+  --texto:        #3C3C58;
+  --humo:         #6C6C8C;
+  --linea:        #E5E4F0;
 
-  --fucsia:       #C4126A;
-  --fucsia-fuerte:#A50E59;
-  --fucsia-suave: #FAE7F0;
-  --vidrio:       #6E4FC0;
-  --vidrio-suave: #EEE9FA;
+  /* las secciones que antes eran oscuras, ahora tenidas de claro */
+  --bloque:       #F2F1F7;
+  --bloque-2:     #FFFFFF;
+  --bloque-texto: #12123A;
+  --bloque-humo:  #6C6C8C;
 
-  --libre-borde:  #C4126A;
-  --libre-fondo:  #FBEAF2;
-  --libre-texto:  #8E0C4C;
-  --res-borde:    #A96A0B;
-  --res-fondo:    #FBF1DC;
-  --res-texto:    #7A4C05;
-  --vend-borde:   #948EA0;
-  --vend-fondo:   #E9E6EC;
-  --vend-texto:   #5D5869;
-  --nodisp-borde: #C9C4CE;
-  --nodisp-fondo: #F0EEF1;
+  /* el pie si se queda oscuro: cierra la pagina sin oscurecer el fondo */
+  --pie-fondo:    #0A1580;
+  --pie-texto:    #FFFFFF;
+  --pie-humo:     #A8B2E6;
 
-  --sombra:  0 1px 2px rgba(20,24,61,.06), 0 8px 24px rgba(20,24,61,.07);
-  --sombra-2:0 2px 6px rgba(20,24,61,.10), 0 18px 44px rgba(20,24,61,.14);
+  /* --- acentos --- */
+  --fucsia-fuerte:#B51279;   /* el fucsia de marca no contrasta sobre blanco */
+  --fucsia-suave: #FDEBF6;
+  --vidrio:       #7B2BD4;
+  --vidrio-suave: #F1E9FD;
+
+  /* --- estados del mapa --- */
+  --libre-borde:  #E5199A;
+  --libre-fondo:  #FDEBF6;
+  --libre-texto:  #A11069;
+  --res-borde:    #B0700B;
+  --res-fondo:    #FDF4E2;
+  --res-texto:    #77490A;
+  --vend-borde:   #9897B4;
+  --vend-fondo:   #EDECF4;
+  --vend-texto:   #54546E;
+  --nodisp-borde: #C8C7D9;
+  --nodisp-fondo: #F5F4FA;
+
+  --sombra:  0 1px 2px rgba(18,18,58,.05), 0 8px 24px rgba(18,18,58,.06);
+  --sombra-2:0 2px 6px rgba(18,18,58,.09), 0 18px 44px rgba(18,18,58,.12);
   --radio:   14px;
   --ancho:   1180px;
 }
 
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --papel:#0D1029; --papel-2:#151934; --papel-3:#1D2140;
-    --titulo:#F1EEF7; --texto:#DFDBE9; --humo:#9A93AD; --linea:#2A2F55;
-    --bloque:#151934; --bloque-2:#1D2140; --bloque-texto:#F1EEF7; --bloque-humo:#9A93AD;
-    --fucsia:#F2589E; --fucsia-fuerte:#FF7CB5; --fucsia-suave:#3A1330;
-    --vidrio:#AC90F5; --vidrio-suave:#251D49;
-    --libre-borde:#F2589E; --libre-fondo:#3A1330; --libre-texto:#FFC2DC;
-    --res-borde:#E4AE4F; --res-fondo:#3B2E14; --res-texto:#F5D79A;
-    --vend-borde:#6B6580; --vend-fondo:#232141; --vend-texto:#A29CB4;
-    --nodisp-borde:#3A3757; --nodisp-fondo:#1A1D38;
+    --papel:#0A0E2E; --papel-2:#121738; --papel-3:#1A2047;
+    --titulo:#F0EFF8; --texto:#DEDCEC; --humo:#9A98B8; --linea:#272D57;
+    --bloque:#121738; --bloque-2:#1A2047; --bloque-texto:#F0EFF8; --bloque-humo:#9A98B8;
+    --pie-fondo:#060C4A; --pie-texto:#FFFFFF; --pie-humo:#9AA5DC;
+    --fucsia-fuerte:#FF63B8; --fucsia-suave:#3D0F2B;
+    --vidrio:#AE8BF5; --vidrio-suave:#25184A;
+    --libre-borde:#F252A8; --libre-fondo:#3D0F2B; --libre-texto:#FFC4E2;
+    --res-borde:#E0A94C; --res-fondo:#3A2D13; --res-texto:#F4D59A;
+    --vend-borde:#6A6890; --vend-fondo:#20244A; --vend-texto:#A19FC0;
+    --nodisp-borde:#333861; --nodisp-fondo:#161B3D;
     --sombra:0 1px 2px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.35);
     --sombra-2:0 2px 6px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.5);
   }
 }
 :root[data-theme="dark"]{
-  --papel:#0D1029; --papel-2:#151934; --papel-3:#1D2140;
-  --titulo:#F1EEF7; --texto:#DFDBE9; --humo:#9A93AD; --linea:#2A2F55;
-  --bloque:#151934; --bloque-2:#1D2140; --bloque-texto:#F1EEF7; --bloque-humo:#9A93AD;
-  --fucsia:#F2589E; --fucsia-fuerte:#FF7CB5; --fucsia-suave:#3A1330;
-  --vidrio:#AC90F5; --vidrio-suave:#251D49;
-  --libre-borde:#F2589E; --libre-fondo:#3A1330; --libre-texto:#FFC2DC;
-  --res-borde:#E4AE4F; --res-fondo:#3B2E14; --res-texto:#F5D79A;
-  --vend-borde:#6B6580; --vend-fondo:#232141; --vend-texto:#A29CB4;
-  --nodisp-borde:#3A3757; --nodisp-fondo:#1A1D38;
+  --papel:#0A0E2E; --papel-2:#121738; --papel-3:#1A2047;
+  --titulo:#F0EFF8; --texto:#DEDCEC; --humo:#9A98B8; --linea:#272D57;
+  --bloque:#121738; --bloque-2:#1A2047; --bloque-texto:#F0EFF8; --bloque-humo:#9A98B8;
+  --pie-fondo:#060C4A; --pie-texto:#FFFFFF; --pie-humo:#9AA5DC;
+  --fucsia-fuerte:#FF63B8; --fucsia-suave:#3D0F2B;
+  --vidrio:#AE8BF5; --vidrio-suave:#25184A;
+  --libre-borde:#F252A8; --libre-fondo:#3D0F2B; --libre-texto:#FFC4E2;
+  --res-borde:#E0A94C; --res-fondo:#3A2D13; --res-texto:#F4D59A;
+  --vend-borde:#6A6890; --vend-fondo:#20244A; --vend-texto:#A19FC0;
+  --nodisp-borde:#333861; --nodisp-fondo:#161B3D;
   --sombra:0 1px 2px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.35);
   --sombra-2:0 2px 6px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.5);
 }
@@ -106,19 +134,20 @@ a{ color:var(--fucsia); }
 
 .env{ width:100%; max-width:var(--ancho); margin-inline:auto; padding-inline:clamp(18px,4vw,40px); }
 .seccion{ padding-block:clamp(52px,7vw,96px); }
-.seccion--oscura{ background:var(--bloque); color:var(--bloque-texto); }
-.seccion--oscura h2,.seccion--oscura h3,.seccion--oscura .display{ color:var(--bloque-texto); }
+.seccion--tono{ background:var(--bloque); color:var(--bloque-texto);
+                border-block:1px solid var(--linea); }
+.seccion--tono h2,.seccion--tono h3,.seccion--tono .display{ color:var(--bloque-texto); }
 .seccion--alt{ background:var(--papel-2); }
 
 .rotulo{
   font-size:.72rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase;
   color:var(--fucsia); margin:0 0 14px;
 }
-.seccion--oscura .rotulo{ color:var(--fucsia-fuerte); }
+.seccion--tono .rotulo{ color:var(--fucsia-fuerte); }
 
 .t-seccion{ font-size:clamp(1.9rem,4.2vw,3rem); }
 .entradilla{ max-width:64ch; margin-top:16px; color:var(--humo); font-size:1.02rem; }
-.seccion--oscura .entradilla{ color:var(--bloque-humo); }
+.seccion--tono .entradilla{ color:var(--bloque-humo); }
 
 /* --- botones ------------------------------------------------ */
 .btn{
@@ -133,7 +162,7 @@ a{ color:var(--fucsia); }
 .btn--principal:hover{ background:var(--fucsia-fuerte); border-color:var(--fucsia-fuerte); }
 .btn--linea{ background:transparent; color:var(--titulo); border-color:var(--linea); }
 .btn--linea:hover{ border-color:var(--fucsia); color:var(--fucsia); }
-.seccion--oscura .btn--linea{ color:var(--bloque-texto); border-color:rgba(255,255,255,.28); }
+.seccion--tono .btn--linea{ color:var(--bloque-texto); border-color:var(--linea); }
 .btn--wa{ background:#1FA855; color:#fff; border-color:#1FA855; }
 .btn--wa:hover{ background:#178643; border-color:#178643; }
 .btn:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
@@ -154,14 +183,18 @@ a{ color:var(--fucsia); }
   position:relative; overflow:hidden;
 }
 .portada::after{
-  content:""; position:absolute; inset:auto -10% -60% 40%; height:70%;
-  background:radial-gradient(60% 60% at 50% 50%, rgba(196,18,106,.30), transparent 70%);
+  content:""; position:absolute; inset:auto -12% -70% 34%; height:80%;
+  background:radial-gradient(58% 58% at 50% 50%, rgba(229,25,154,.15), transparent 70%);
   pointer-events:none;
+}
+.portada::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:5px;
+  background:var(--grad-marca);
 }
 .portada__marca{ margin-bottom:clamp(20px,3.5vw,34px); }
 .aguila{
   width:clamp(122px,15vw,158px); aspect-ratio:1; margin-left:-6px;
-  background:var(--bloque-texto);
+  background:var(--grad-marca);
   -webkit-mask:var(--logo) center/contain no-repeat;
           mask:var(--logo) center/contain no-repeat;
 }
@@ -176,10 +209,10 @@ a{ color:var(--fucsia); }
 .presenta{ font-size:.7rem; letter-spacing:.34em; text-transform:uppercase; color:var(--bloque-humo); margin-bottom:10px; }
 .titulazo{ font-size:clamp(2.9rem,9.5vw,6.2rem); line-height:.98; letter-spacing:-.045em;
            color:var(--bloque-texto); font-weight:800; }
-.titulazo em{ font-style:normal; color:var(--fucsia-fuerte); display:block; }
+.titulazo em{ font-style:normal; color:var(--fucsia); display:block; }
 .titulazo small{ display:block; font-size:.4em; font-weight:500; letter-spacing:-.02em; margin-top:.1em; }
 .lema{
-  margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,.18);
+  margin-top:22px; padding-top:18px; border-top:1px solid var(--linea);
   font-size:clamp(.74rem,2vw,.92rem); font-weight:500; letter-spacing:.24em; text-transform:uppercase;
   color:var(--bloque-texto);
 }
@@ -190,7 +223,8 @@ a{ color:var(--fucsia); }
 
 .tarjeta-disp{
   background:var(--papel-2); color:var(--texto);
-  border-radius:var(--radio); padding:26px 26px 22px; box-shadow:var(--sombra-2);
+  border:1px solid var(--linea); border-radius:var(--radio);
+  padding:26px 26px 22px; box-shadow:var(--sombra-2);
 }
 .disp__n{
   font-family:"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-weight:800; color:var(--fucsia);
@@ -340,29 +374,40 @@ table.esp-tabla{ width:100%; border-collapse:collapse; font-size:.88rem; min-wid
 
 .cifra{ padding:22px 0; border-top:2px solid var(--fucsia); }
 .cifra__n{ font-family:"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size:clamp(2.4rem,5vw,3.4rem); font-weight:800; color:var(--titulo); line-height:1; font-variant-numeric:tabular-nums; }
-.seccion--oscura .cifra__n{ color:var(--bloque-texto); }
+.seccion--tono .cifra__n{ color:var(--bloque-texto); }
 .cifra__t{ font-size:.86rem; color:var(--humo); margin-top:8px; }
-.seccion--oscura .cifra__t{ color:var(--bloque-humo); }
+.seccion--tono .cifra__t{ color:var(--bloque-humo); }
 
 .ben{ display:flex; gap:11px; font-size:.94rem; padding:11px 0; border-bottom:1px solid var(--linea); }
 .ben::before{ content:""; flex:none; width:7px; height:7px; border-radius:50%; background:var(--fucsia); margin-top:.55em; }
-.seccion--oscura .ben{ border-color:rgba(255,255,255,.12); }
+.seccion--tono .ben{ border-color:var(--linea); }
 
-.zona-c{ background:var(--papel-2); border:1px solid var(--linea); border-radius:var(--radio); padding:20px 22px; }
-.zona-c h3{ font-size:1.08rem; margin-bottom:7px; }
+.zona-c{
+  background:var(--papel-2); border:1px solid var(--linea); border-top:3px solid var(--c);
+  border-radius:var(--radio); padding:22px;
+}
+.zona-c__i{
+  display:grid; place-items:center; width:46px; height:46px;
+  border-radius:13px; background:var(--c-suave); margin-bottom:14px;
+}
+.zona-c__i svg{
+  width:25px; height:25px; fill:none; stroke:var(--c);
+  stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;
+}
+.zona-c h3{ font-size:1.06rem; margin-bottom:6px; }
 .zona-c p{ font-size:.87rem; color:var(--humo); }
 
 .sem{ display:grid; gap:0; margin-top:36px; }
 .sem__f{ display:grid; grid-template-columns:minmax(110px,168px) 1fr; gap:clamp(16px,3vw,36px);
-         padding:22px 0; border-top:1px solid rgba(255,255,255,.14); }
-.sem__f:last-child{ border-bottom:1px solid rgba(255,255,255,.14); }
+         padding:22px 0; border-top:1px solid var(--linea); }
+.sem__f:last-child{ border-bottom:1px solid var(--linea); }
 @media (max-width:640px){ .sem__f{ grid-template-columns:1fr; gap:10px; } }
-.sem__n{ font-family:"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size:1.15rem; font-weight:700; color:var(--fucsia-fuerte); }
+.sem__n{ font-family:"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-size:1.15rem; font-weight:700; color:var(--azul); }
 .sem__n b{ display:block; font-family:"Poppins",sans-serif; font-size:.66rem; font-weight:600;
            letter-spacing:.17em; text-transform:uppercase; color:var(--bloque-humo); margin-bottom:5px; }
 .sem__l{ list-style:none; padding:0; margin:0; display:grid; gap:6px; font-size:.92rem; color:var(--bloque-texto); }
 .sem__l li{ display:flex; gap:9px; }
-.sem__l li::before{ content:"\00B7"; color:var(--fucsia-fuerte); font-weight:700; flex:none; }
+.sem__l li::before{ content:"\00B7"; color:var(--fucsia); font-weight:700; flex:none; }
 
 details.faq{ border-bottom:1px solid var(--linea); }
 details.faq summary{ cursor:pointer; padding:17px 0; font-weight:600; color:var(--titulo);
@@ -372,16 +417,16 @@ details.faq summary::after{ content:"+"; color:var(--fucsia); font-size:1.35rem;
 details.faq[open] summary::after{ content:"\2212"; }
 details.faq p{ padding:0 0 17px; color:var(--humo); font-size:.93rem; max-width:74ch; }
 
-.pie{ background:var(--bloque); color:var(--bloque-humo); padding-block:44px; font-size:.89rem; }
-.pie a{ color:var(--bloque-texto); text-decoration:none; border-bottom:1px solid rgba(255,255,255,.25); }
-.pie a:hover{ color:var(--fucsia-fuerte); }
+.pie{ background:var(--pie-fondo); color:var(--pie-humo); padding-block:44px; font-size:.89rem; }
+.pie a{ color:var(--pie-texto); text-decoration:none; border-bottom:1px solid rgba(255,255,255,.30); }
+.pie a:hover{ color:#FF7CC4; }
 .pie__r{ display:grid; gap:26px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-.pie__t{ font-size:.66rem; letter-spacing:.17em; text-transform:uppercase; color:var(--bloque-humo); margin-bottom:9px; }
-.pie__v{ color:var(--bloque-texto); line-height:1.65; }
+.pie__t{ font-size:.66rem; letter-spacing:.17em; text-transform:uppercase; color:var(--pie-humo); margin-bottom:9px; }
+.pie__v{ color:var(--pie-texto); line-height:1.65; }
 .pie__equipo{ margin-top:30px; padding-top:18px; border-top:1px solid rgba(255,255,255,.14); }
 .pie__equipo button{ background:none; border:none; padding:0; font:inherit; cursor:pointer;
-                     color:var(--bloque-humo); text-decoration:underline; text-underline-offset:3px; }
-.pie__equipo button:hover{ color:var(--fucsia-fuerte); }
+                     color:var(--pie-humo); text-decoration:underline; text-underline-offset:3px; }
+.pie__equipo button:hover{ color:#FF7CC4; }
 
 /* --- visor del plano ambientado ------------------------------ */
 dialog.visor{ border:none; padding:0; background:transparent; max-width:min(94vw,1000px); width:100%; }
@@ -459,12 +504,11 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
 <section class="seccion">
   <div class="env">
     <p class="rotulo">Lo que est&aacute;s comprando</p>
-    <h2 class="t-seccion">No est&aacute;s alquilando una mesa.<br>Est&aacute;s entrando a una campa&ntilde;a.</h2>
+    <h2 class="t-seccion">Tu marca no empieza el d&iacute;a del bazar.</h2>
     <p class="entradilla">
-      Durante los <b>30 d&iacute;as previos</b> al bazar, American Help Centers pone a trabajar su
-      departamento de marketing para llenar el sal&oacute;n. Tu marca no aparece el 13 de noviembre:
-      aparece desde octubre, y sigue apareciendo despu&eacute;s. Eso es lo que separa este bazar de
-      una feria cualquiera.
+      Tu participaci&oacute;n comienza <b>30 d&iacute;as antes</b> de que abramos las puertas. Durante ese
+      tiempo, American Help Centers activa su plataforma de marketing para presentar las marcas
+      participantes, generar expectativa y atraer p&uacute;blico al evento.
     </p>
 
     <div class="rejilla r-4">
@@ -492,11 +536,18 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
 <section class="seccion seccion--alt" id="mapa">
   <div class="env">
     <p class="rotulo">Croquis del sal&oacute;n</p>
-    <h2 class="t-seccion">Elige tu espacio en el plano</h2>
+    <h2 class="t-seccion">Elige tu espacio</h2>
     <p class="entradilla">
-      Toca el espacio que quieras para ver su paquete y su precio. Los que ya est&aacute;n vendidos
-      aparecen tachados. Al reservar, el espacio queda bloqueado <b>30 minutos</b> a tu nombre para
-      que nadie m&aacute;s lo tome mientras completas el pago.
+      Selecciona en el plano el espacio que deseas reservar para ver precio y paquete. Los espacios
+      ya reservados aparecer&aacute;n como no disponibles.
+    </p>
+    <p class="entradilla">
+      Los <b>m&oacute;dulos A, B y D</b> son espacios premium con m&oacute;dulo de vidrio. Haz clic en cada uno
+      para conocer sus caracter&iacute;sticas, beneficios y disponibilidad.
+    </p>
+    <p class="entradilla">
+      Al iniciar la reserva, tendr&aacute;s <b>30 minutos</b> para completar el pago antes de que el
+      espacio vuelva a estar disponible.
     </p>
 
     <div id="aviso-inv" class="aviso oculto" style="margin-top:22px"></div>
@@ -541,18 +592,18 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
 <section class="seccion">
   <div class="env">
     <p class="rotulo">Propuesta comercial</p>
-    <h2 class="t-seccion">Cinco formas de estar</h2>
+    <h2 class="t-seccion">Cuatro formas de estar</h2>
     <p class="entradilla">
-      Los cuatro primeros son espacios f&iacute;sicos y se eligen en el plano. El quinto no es un
-      stand: es el nombre del evento.
+      Todos son espacios f&iacute;sicos y se eligen en el plano. El Premium es el m&oacute;dulo de vidrio
+      completo, para una sola marca.
     </p>
 
-    <div class="rejilla r-3" id="paquetes"></div>
+    <div class="rejilla r-4" id="paquetes"></div>
   </div>
 </section>
 
 <!-- ═══════════════════════ BENEFICIOS ═══════════════════════ -->
-<section class="seccion seccion--oscura">
+<section class="seccion seccion--tono">
   <div class="env">
     <p class="rotulo">Incluido para todo expositor</p>
     <h2 class="t-seccion">Lo que te llevas, adem&aacute;s del espacio</h2>
@@ -594,20 +645,12 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
       te ubicamos en la zona que te corresponde.
     </p>
 
-    <div class="rejilla r-3">
-      <div class="zona-c"><h3>Moda y Accesorios</h3><p>Ropa, zapatos, carteras, bisuter&iacute;a.</p></div>
-      <div class="zona-c"><h3>Belleza y Bienestar</h3><p>Maquillaje, skincare, barber&iacute;a, est&eacute;tica, fitness, cuidado personal.</p></div>
-      <div class="zona-c"><h3>Hogar y Decoraci&oacute;n</h3><p>Decoraci&oacute;n, muebles, velas, plantas, organizaci&oacute;n.</p></div>
-      <div class="zona-c"><h3>Regalos y Personalizados</h3><p>Grabado l&aacute;ser, papeler&iacute;a, tazas, llaveros, agendas, acr&iacute;licos.</p></div>
-      <div class="zona-c"><h3>Tecnolog&iacute;a y Servicios</h3><p>Tecnolog&iacute;a, fotograf&iacute;a, marketing, dise&ntilde;o, contabilidad, bienes ra&iacute;ces, seguros.</p></div>
-      <div class="zona-c"><h3>Gastron&oacute;mica Artesanal</h3><p>Caf&eacute;, postres, chocolates, reposter&iacute;a, snacks, productos gourmet.</p></div>
-      <div class="zona-c" style="border-color:var(--vidrio)"><h3 style="color:var(--vidrio)">Zona de M&oacute;dulos de Vidrio</h3><p>Los <b>Stand Premium</b>: marcas de ropa, bancos, concesionarios, aseguradoras, constructoras y cl&iacute;nicas. Una empresa por m&oacute;dulo.</p></div>
-    </div>
+    <div class="rejilla r-3" id="zonas"></div>
   </div>
 </section>
 
 <!-- ═══════════════════════ CRONOGRAMA ═══════════════════════ -->
-<section class="seccion seccion--oscura">
+<section class="seccion seccion--tono">
   <div class="env">
     <p class="rotulo">Los 30 d&iacute;as previos</p>
     <h2 class="t-seccion">Qu&eacute; pasa antes de que abran las puertas</h2>
@@ -737,16 +780,17 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
     <div style="margin-top:30px">
       <details class="faq">
         <summary>&iquest;Qu&eacute; incluye exactamente mi stand?</summary>
-        <p>Depende del paquete. El B&aacute;sico ($100) es el espacio de 8&#39;x8&#39;, el derecho a vender, tu
-        inclusi&oacute;n en el mapa del evento y la publicaci&oacute;n grupal en redes. El Plus ($200) sube a
-        10&#39;x10&#39;, mejor ubicaci&oacute;n, publicaci&oacute;n individual, mesa y dos sillas. El Destacado ($250)
-        a&ntilde;ade ubicaci&oacute;n preferencial, publicidad especial, menci&oacute;n durante el evento y
-        electricidad si aplica. El <b>Stand Premium</b> ($500) es un m&oacute;dulo de vidrio entero. Mira el detalle de cada uno m&aacute;s arriba.</p>
+        <p>Depende del paquete. El <b>B&aacute;sico</b> ($100) es el espacio de 8&#39;x8&#39;, el derecho a vender, tu
+        inclusi&oacute;n en el mapa del evento y la publicaci&oacute;n grupal en redes. El <b>Emprendedor</b> ($180)
+        sube a 10&#39;x10&#39;, mejor ubicaci&oacute;n, publicaci&oacute;n individual, mesa y dos sillas. El
+        <b>Destacado</b> ($200) a&ntilde;ade ubicaci&oacute;n preferencial, publicidad especial, menci&oacute;n durante
+        el evento y electricidad si aplica. El <b>Premium</b> ($250) es un m&oacute;dulo de vidrio entero
+        para una sola marca. Mira el detalle de cada uno m&aacute;s arriba.</p>
       </details>
       <details class="faq">
         <summary>&iquest;Hay electricidad en los stands?</summary>
-        <p>En el paquete Destacado ($250) y en los m&oacute;dulos de vidrio, s&iacute;, cuando el espacio lo
-        permite. En B&aacute;sico y Plus no est&aacute; incluida: si la necesitas, av&iacute;sanos al reservar y
+        <p>En el paquete Destacado ($200) y en los m&oacute;dulos de vidrio, s&iacute;, cuando el espacio lo
+        permite. En B&aacute;sico y Emprendedor no est&aacute; incluida: si la necesitas, av&iacute;sanos al reservar y
         vemos qu&eacute; ubicaci&oacute;n te sirve.</p>
       </details>
       <details class="faq">
@@ -847,7 +891,7 @@ dialog.visor::backdrop{ background:rgba(10,12,32,.86); }
 /* --- 1. LOS PAQUETES ----------------------------------------- */
 const PAQUETES = {
   basico: {
-    nombre: "Stand Emprendedor Básico",
+    nombre: "Stand Básico",
     corto:  "Básico",
     precio: 100,
     medida: "8' x 8'",
@@ -859,10 +903,10 @@ const PAQUETES = {
     ],
     para: "Nuevos emprendedores y negocios pequeños."
   },
-  plus: {
-    nombre: "Stand Emprendedor Plus",
-    corto:  "Plus",
-    precio: 200,
+  emprendedor: {
+    nombre: "Stand Emprendedor",
+    corto:  "Emprendedor",
+    precio: 180,
     medida: "10' x 10'",
     incluye: [
       "Espacio de 10' x 10'",
@@ -876,7 +920,7 @@ const PAQUETES = {
   destacado: {
     nombre: "Stand Destacado",
     corto:  "Destacado",
-    precio: 250,
+    precio: 200,
     medida: "Ubicación preferencial",
     incluye: [
       "Espacio preferencial (junto al área de DJ o a la entrada)",
@@ -890,7 +934,7 @@ const PAQUETES = {
   premium: {
     nombre: "Stand Premium",
     corto:  "Premium",
-    precio: 500,
+    precio: 250,
     medida: "Módulo de vidrio completo",
     incluye: [
       "Todo el módulo de vidrio para una sola empresa",
@@ -901,23 +945,6 @@ const PAQUETES = {
       "Logo en el material oficial"
     ],
     para: "Marcas de ropa, bancos, concesionarios, clínicas, seguros, constructoras y empresas grandes."
-  },
-  patrocinador: {
-    nombre: "Patrocinador Co-Principal",
-    corto:  "Patrocinador",
-    precio: 600,
-    desde:  true,
-    medida: "Naming del evento",
-    incluye: [
-      "Naming del evento: «AHC Emprende Market presentado por ____»",
-      "Logo principal en todo el material",
-      "Presencia en redes sociales",
-      "Entrevistas",
-      "Material POP",
-      "Presencia institucional"
-    ],
-    para: "La marca que quiere su nombre junto al del evento.",
-    sinMapa: true
   }
 };
 
@@ -959,10 +986,54 @@ for (var f = 0; f < 5; f++) {
 [["21", 112], ["22", 224], ["23", 336], ["24", 448], ["25", 560]].forEach(function(s){
   ESPACIOS.push({
     id: s[0], etiqueta: s[0], tipo: "stand",
-    paquete: "plus", disponible: true,
+    paquete: "emprendedor", disponible: true,
     x: 648, y: s[1], w: 94, h: 94
   });
 });
+
+/* --- 2-bis. LAS ZONAS DEL SALON -------------------------------
+   Para cambiar un icono o un color, se toca aqui y en ningun sitio mas.
+   ------------------------------------------------------------- */
+const ZONAS = [
+  { nombre: "Moda y Accesorios", color: "#E5199A",
+    detalle: "Ropa, zapatos, carteras, bisutería.",
+    icono: '<path d="M12 6.4a1.75 1.75 0 1 1 1.75 1.75c-.97 0-1.75.6-1.75 1.5v.85"/>' +
+           '<path d="M12 10.5 3.9 16.1c-.85.6-.43 1.9.6 1.9h15c1.03 0 1.45-1.3.6-1.9L12 10.5Z"/>' },
+
+  { nombre: "Belleza y Bienestar", color: "#B9159C",
+    detalle: "Maquillaje, skincare, barbería, estética, fitness, cuidado personal.",
+    icono: '<path d="M12 3.2 13.8 8.6 19.2 10.4 13.8 12.2 12 17.6 10.2 12.2 4.8 10.4 10.2 8.6 12 3.2Z"/>' +
+           '<path d="M18.2 16.4l.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7.7-1.9Z"/>' },
+
+  { nombre: "Hogar y Decoración", color: "#7B2BD4",
+    detalle: "Decoración, muebles, velas, plantas, organización.",
+    icono: '<path d="M3.2 10.6 12 3.4l8.8 7.2"/>' +
+           '<path d="M5.6 9.5V20h12.8V9.5"/><path d="M10 20v-5.2h4V20"/>' },
+
+  { nombre: "Regalos y Personalizados", color: "#5637DD",
+    detalle: "Grabado láser, papelería, tazas, llaveros, agendas, acrílicos.",
+    icono: '<path d="M3.4 11.2h17.2V20H3.4z"/><path d="M2.6 7.4h18.8v3.8H2.6z"/>' +
+           '<path d="M12 7.4V20"/>' +
+           '<path d="M12 7.4S10.6 3.8 8.6 3.8a1.9 1.9 0 0 0 0 3.6H12Z"/>' +
+           '<path d="M12 7.4s1.4-3.6 3.4-3.6a1.9 1.9 0 0 1 0 3.6H12Z"/>' },
+
+  { nombre: "Tecnología y Servicios", color: "#1226C8",
+    detalle: "Tecnología, fotografía, marketing, diseño, contabilidad, bienes raíces, seguros.",
+    icono: '<path d="M4.2 5.4h15.6v10.2H4.2z"/><path d="M2.4 19h19.2"/>' +
+           '<path d="M10.2 19h3.6"/>' },
+
+  { nombre: "Gastronómica Artesanal", color: "#D01B5E",
+    detalle: "Café, postres, chocolates, repostería, snacks, productos gourmet.",
+    icono: '<path d="M4.2 8.6h11.4v4.9a5 5 0 0 1-5 5H9.2a5 5 0 0 1-5-5V8.6Z"/>' +
+           '<path d="M15.6 10h1.8a2.2 2.2 0 0 1 0 4.4h-1.8"/>' +
+           '<path d="M7 3.4v2M10.4 2.8v2.6M13.8 3.4v2"/>' },
+
+  { nombre: "Módulos de Vidrio", color: "#3A54E8",
+    detalle: "Los Stand Premium: marcas de ropa, bancos, concesionarios, aseguradoras, constructoras y clínicas. Una empresa por módulo.",
+    icono: '<path d="M4.8 20V4.6h9.4V20"/><path d="M14.2 10.2h5V20"/>' +
+           '<path d="M7.6 8h3.8M7.6 11.8h3.8M7.6 15.6h3.8"/>' +
+           '<path d="M16.4 13.4h.9M16.4 16.8h.9"/>' }
+];
 
 /* --- 3. AJUSTES ---------------------------------------------- */
 const MINUTOS_BLOQUEO = 30;
@@ -974,7 +1045,7 @@ const MODO            = "revision";  // "normal" (la de trabajo) o "revision" (l
 // Links de pago de Stripe, uno por paquete. Cuando existan, se pegan aquí
 // y los botones empiezan a llevar directo al pago.
 const LINKS_PAGO = {
-  basico: null, plus: null, destacado: null, premium: null
+  basico: null, emprendedor: null, destacado: null, premium: null
 };
 
 /* ============================================================== */
@@ -1176,24 +1247,32 @@ function pintarSelector(){
 
 /* --- los paquetes --------------------------------------------- */
 function pintarPaquetes(){
-  var orden = ["basico", "plus", "destacado", "premium", "patrocinador"];
+  var orden = ["basico", "emprendedor", "destacado", "premium"];
   var h = orden.map(function(k){
     var p = PAQUETES[k];
     var libres = VENDIBLES.filter(function(e){ return e.paquete === k && estadoDe(e) === "libre"; }).length;
     var totales = VENDIBLES.filter(function(e){ return e.paquete === k; }).length;
-    var pie = p.sinMapa
-      ? '<p class="paq__q">No se elige en el plano: escríbenos y lo conversamos.</p>'
-      : '<p class="paq__q">' + (libres === 0
+    var pie = '<p class="paq__q">' + (libres === 0
           ? "Agotado — no quedan espacios de este paquete."
           : "Quedan <b>" + libres + "</b> de " + totales) + '</p>';
     return '<article class="paq' + (k === "destacado" ? " paq--destaca" : "") + '">' +
       '<div class="paq__t">' + esc(p.nombre) + '</div>' +
-      '<div class="paq__pre">' + (p.desde ? '<small>Desde</small>' : '') + dinero(p.precio) +
-      (p.desde ? '' : '<small>' + esc(p.medida) + '</small>') + '</div>' +
+      '<div class="paq__pre">' + dinero(p.precio) +
+      '<small>' + esc(p.medida) + '</small></div>' +
       '<ul class="paq__inc">' + p.incluye.map(function(i){ return "<li>" + esc(i) + "</li>"; }).join("") + '</ul>' +
       '<p class="paq__para">' + esc(p.para) + '</p>' + pie + '</article>';
   });
   $("#paquetes").innerHTML = h.join("");
+}
+
+/* --- las zonas ------------------------------------------------ */
+function pintarZonas(){
+  $("#zonas").innerHTML = ZONAS.map(function(z){
+    return '<article class="zona-c" style="--c:' + z.color + ';--c-suave:' + z.color + '22">' +
+      '<span class="zona-c__i"><svg viewBox="0 0 24 24" aria-hidden="true">' + z.icono + '</svg></span>' +
+      '<h3>' + esc(z.nombre) + '</h3>' +
+      '<p>' + esc(z.detalle) + '</p></article>';
+  }).join("");
 }
 
 /* --- el contador ---------------------------------------------- */
@@ -1212,7 +1291,8 @@ function pintarContador(){
 }
 
 function pintarTodo(){
-  dibujarPlano(); pintarPanel(); pintarTabla(); pintarSelector(); pintarPaquetes(); pintarContador();
+  dibujarPlano(); pintarPanel(); pintarTabla(); pintarSelector(); pintarPaquetes();
+  pintarZonas(); pintarContador();
   if (esAdmin) pintarAdmin();
 }
 
